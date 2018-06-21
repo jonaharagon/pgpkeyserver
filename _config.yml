@@ -2,21 +2,21 @@
 title: OpenPGP Keyserver
 email: matt@mattrude.com
 description: ""
-url: "https://keyserver.mattrude.com"
-name: "keyserver.mattrude.com"
+url: "https://a.sks.jda.mn"
+name: "a.sks.jda.mn"
 baseurl: ""
-#destination: "/var/www/keyserver.mattrude.com"
 
-owner_name: "Matt Rude"
-owner_email: "matt@mattrude.com"
-owner_xmpp: "matt@mattrude.com"
-owner_pgpkey: "0xc4909ee495b0761f"
-owner_omemo: "a4b88aca f63e1f05 6f8fd700 7847baf3 3f653098 64d478a7 d7387c88 fd8fb834"
-owner_github: "mattrude"
-owner_twitter: "mdrude"
-owner_facebook: "mattrude"
-owner_instagram: "mattdrude"
-owner_website: "https://mattrude.com"
+owner_name: "Jonah Aragon"
+owner_email: "jonah@triplebit.net"
+owner_keybase: "jonaharagon"
+owner_xmpp: ""
+owner_pgpkey: "0xDB49BB255B868219"
+owner_omemo: ""
+owner_github: "jonaharagon"
+owner_twitter: "jonaharagon"
+owner_facebook: ""
+owner_instagram: "jonaharagon"
+owner_website: "https://jda.mn"
 
 # Analytics settings
 google_analytics_id: UA-9532791-9

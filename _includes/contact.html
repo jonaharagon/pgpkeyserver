@@ -1,39 +1,38 @@
 <div class="col-md-5">
     <h3>Contact Information</h3>
-    <p>This site is maintained by Matt Rude (<a href="{{ site.url }}/d/0xc4909ee495b0761f">0xc4909ee495b0761f</a>). If you would like to report any problems or bugs, please send a email or XMPP messsage to the email address listed in one of my public keys.</p>
-    <p>If you are thankful for this service, please consider donating some funds to the cause. My bitcoin address is <code class="highlighter-rouge">1211xFABAc7W4QELfaGFvEqzUhVF2zbm33</code>.</p>
-    <p>You may also see my profile on <a href="https://keybase.io/mattrude">keybase.io/mattrude</a>.</p>
+    <p>This site is maintained by Jonah Aragon (<a href="{{ site.url }}/pks/lookup?op=get&search=0xDB49BB255B868219">0xDB49BB255B868219</a>). If you would like to report any problems or bugs, please send an email to the email address listed in my public key.</p>
+    <p>If you are thankful for this service, please consider donating some funds to the cause. My bitcoin address is <code class="highlighter-rouge">1Nxmbbo5KWRktenmvqwDFwrfnxoza8Uf19</code>.</p>
+    <p>You may also see my profile on <a href="https://keybase.io/{{ site.owner_keybase }}">keybase.io/{{ site.owner_keybase }}</a>.</p>
     <ul id="contact-list" class="list-inline">
       <li><b><a href="mailto:{{ site.owner_email }}" title="Email Address"><i class="fa fa-envelope "></i></a></b></li>
       <li><b><a href="https://www.twitter.com/{{ site.owner_twitter }}" title="Twitter Profile Page"><i class="fa fa-twitter-square"></i></a></b></li>
-      <li><b><a href="https://www.facebook.com/{{ site.owner_facebook }}" title="Facebook Profile Page"><i class="fa fa-facebook-official"></i></a></b></li>
-      <li><b><a href="https://www.instagram.com//{{ site.owner_instagram }}" title="Instagram Profile Page"><i class="fa fa-instagram"></i></a></b></li>
+      <li><b><a href="https://www.instagram.com/{{ site.owner_instagram }}" title="Instagram Profile Page"><i class="fa fa-instagram"></i></a></b></li>
       <li><b><a href="https://github.com/{{ site.owner_github }}" title="Github Profile Page"><i class="fa fa-github"></i></a></b></li>
-      <li><b><a href="xmpp:{{ site.owner_xmpp }}" title="XMPP/Jabber ID"><i class="fa fa-commenting"></i></a></b></li>
       <li><b><a href="{{ site.owner_website }}" title="Website"><i class="fa fa-link"></i></a></b></li>
-      <li><b><a href="{{ site.url }}/search/vindex/hash/fingerprint/{{ site.owner_pgpkey }}" title="PGP Public Key"><i class="fa fa-key"></i></a></b></li>
+      <li><b><a href="{{ site.url }}/pks/lookup?op=get&search={{ site.owner_pgpkey }}" title="PGP Public Key"><i class="fa fa-key"></i></a></b></li>
     </ul>
 </div>
 
 <div class="col-md-7">
     <h3 id="my-public-pgp-key-information">My Public PGP Key Information</h3>
     <p><strong>My Default RSA Key:</strong></p>
-    <div class="highlighter-rouge"><pre class="highlight"><code>uid = Matt Rude
-pub = rsa2048/95B0761F 2015-03-02
-sub = rsa2048/BC158061 2015-03-02
-fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F</code></pre></div>
-    <p><strong>My Elliptic Curve Cryptography (ECC) Key:</strong></p>
-    <div class="highlighter-rouge"><pre class="highlight"><code>uid = Matt Rude
-pub = nistp256/03305F35 2015-02-15
-fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35</code></pre></div>
-    <p>Or, you may validate my keys using one of my <a href="{{ site.url }}/guides/dns-dane-cert-records/">DANE</a> or <a href="{{ site.url }}/guides/public-key-association/">PKA</a> DNS records.</p></div>
+    <div class="highlighter-rouge"><pre class="highlight"><code>pub   rsa4096 2018-06-19 [SC] [expires: 2022-06-19]
+      9BD822880E2784EE5C929CD6DB49BB255B868219
+uid           [ultimate] Jonah Aragon (Master Key) &lt;jonah@triplebit.net&gt;
+uid           [ultimate] Jonah Aragon &lt;jonaharagon@gmail.com&gt;
+uid           [ultimate] Jonah Aragon &lt;jonah@jonaharagon.com&gt;
+uid           [ultimate] Jonah Aragon &lt;jonah@sea.agency&gt;
+uid           [ultimate] Jonah Aragon &lt;jonah@imperialnic.com&gt;
+sub   rsa4096 2018-06-19 [E] [expires: 2022-06-19]
+sub   rsa4096 2018-06-20 [S] [expires: 2019-06-20]
+sub   rsa4096 2018-06-20 [A]
+</code></pre></div>
 </div>
 
 <h3 id="signed-contact-information">Signed Contact Information</h3>
 
-<p>A signed copy of this information may be found <a href="{{ site.url }}/contact.txt">here</a>, or using my <a href="{{ site.url }}/d/0x0314CD8503305F35">ECC key</a>, may be found <a href="{{ site.url }}/contact-ecc.txt">here</a>. You may validate these files by running the below commands:</p>
+<p>A signed copy of this information may be found <a href="{{ site.url }}/contact.txt">here</a>. You may validate the file by running the command below:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code style="overflow:auto;word-wrap:normal;white-space:pre;">curl -s https://keyserver.mattrude.com/contact.txt |gpg --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
-curl -s https://keyserver.mattrude.com/contact-ecc.txt |gpg --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
+<div class="highlighter-rouge"><pre class="highlight"><code style="overflow:auto;word-wrap:normal;white-space:pre;">curl -s {{ site.url }}/contact.txt |gpg --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
 </code></pre>
 </div>
