@@ -1,7 +1,10 @@
 <div id="form" class="submit">
     <form action="{{ site.url }}/pks/add" method="post">
         <textarea name="keytext" rows="15"></textarea>
-        <p><b>Notice:</b> <i>When you submit a key to this server, either via that web interface or via HKP, that key will be migrated around the pool to the different servers in the pool. That key will then be stored on each of those servers in addition to this server.  Due to the transferring of keys between servers not managed by a central hosts, deleting a key is not possible at this time.  If a key were deleted from this server, other servers in the pool will restore the key in order to maintain a complete collection.  This is the servers intended behavior.</i></p>
+        <p><b>Notice:</b> <i>When you submit a key to this server, either via the web interface or via HKP(S) (in your GPG client), that key will be propagated to every server in the sks-keyserver pool.
+          That key will then be stored on each of those servers in addition to this server. Because the transferring of keys between servers is not managed by a central host, deleting a key is not possible.
+          If a key were deleted from this server manually, other servers in the pool will restore the key in order to maintain a complete collection. This is the servers intended behavior.
+          Therefore, the only way to mark a key as not to be used, is to issue a revocation certificate to the keyserver, which must have been made ahead of time using your private key.</i></p>
         <input type="submit" value="Submit key to pool">
         <input type="reset" value="Reset">
     </form>
