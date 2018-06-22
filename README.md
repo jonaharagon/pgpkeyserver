@@ -54,7 +54,7 @@ This will build the site into the `_site` directory within the working directory
 
 Here's my complete configuration. Adjustments must be made as necessary to fit your config.
 
-**/etc/nginx/sites-enabled/a.sks.jda.mn.conf:**:
+**/etc/nginx/sites-enabled/a.sks.jda.mn.conf:**
 ```
 server  {
         listen 80 default_server;
@@ -89,7 +89,7 @@ server  {
 }
 ```
 
-**/etc/nginx/snippets/pks-rewrite.conf:**:
+**/etc/nginx/snippets/pks-rewrite.conf:**
 ```
 rewrite ^/stats /pks/lookup?op=stats;
 rewrite ^/s/(.*) /pks/lookup?search=$1;
@@ -129,22 +129,23 @@ location /pks {
 ```
 
 ## License
+```
+              GNU GENERAL PUBLIC LICENSE
+                Version 3, 29 June 2007
 
-                  GNU GENERAL PUBLIC LICENSE
-                    Version 3, 29 June 2007
+SKS-Keyserver Frontend for a.sks.jda.mn
+Copyright (C) 2018 Jonah Aragon <jonah@triplebit.net>
 
-    OpenPGP Key Server Website for keyserver.mattrude.com
-    Copyright (C) 2012-2018 Matt Rude <matt@mattrude.com>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+```
