@@ -11,8 +11,9 @@ matrix:
     - os: osx
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ruby    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-ca-certificates ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ruby ; fi
 
 install: bundle install
 script: bundle exec jekyll build -d _site && bundle exec htmlproofer ./_site/
