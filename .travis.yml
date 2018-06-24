@@ -1,7 +1,7 @@
 language: ruby
 sudo: false
 install: bundle install
-script: bundle exec jekyll build -d _site && bundle exec htmlproofer --internal-domains "a.sks.jda.mn" --disable-external ./_site
+script: bundle exec jekyll build -d _site && bundle exec htmlproofer --internal-domains "a.sks.jda.mn" --url-ignore http[s]?:\/\/a.sks.jda.mn\/(pks|stats)([\/]?)+.* ./_site
 rvm:
   - 2.3.1
   - 2.5.1
