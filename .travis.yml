@@ -10,6 +10,11 @@ matrix:
   allow_failures:
     - os: osx
 
+addons:
+  apt:
+    packages:
+      - libssl1.0.0
+
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-ca-certificates ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update ; fi
